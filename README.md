@@ -32,6 +32,13 @@ Sample Config in creating a Client:
 * subject type: public
 ```
 
+**Install Your Gluu Server Host certificate**
+
+You need to import your GLuu Server certifcate with the follwing command:
+```
+keytool -importcert -file gluucert.cer -alias gluucert -keystore “%JAVA_HOME%/jre/lib/security/cacerts”
+```
+
 ### Clone
 To get started you can simply clone this repository using git:
 ```
@@ -66,9 +73,13 @@ Then you can run the JAR file with:
 ```
 java -jar target/*.jar
 ```
-
 *Instead of `mvn` you can also use the maven-wrapper `./mvnw` to ensure you have everything necessary to run the Maven build.*
 
+### Test Run the RP spring boot app
+You can test the application by going to your browser and enter:
+```
+http://localhost:8080/
+```
 
 [1]: https://gluu.org/docs/gluu-server/
 [2]: https://gluu.org/docs/gluu-server/4.1/installation-guide/
