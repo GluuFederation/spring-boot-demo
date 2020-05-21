@@ -50,8 +50,8 @@ cd spring-boot-demo
 In order to get your app working you have to provide the following settings:
 ```
 issuer-uri = your.gluu.server.hostname
-client-id = thisisthe-clientID-ofyour-createdcliet
-client-secret = clientSecretOfCreatedCliet
+client-id = your-app-client-id
+client-secret = your-app-client-secret
 ```
 The configuration is located in `\src\main\resources\application.yml`.
 
