@@ -8,15 +8,13 @@ The sample application is an Spring Boot RP of [Gluu Server 4.1][1].
 For information on how to setup your Gluu Server you can follow along with the [Installation Guide][2].
 
 
-## Getting Started
-
-### Prerequisites
+## Prerequisites
 * Git
 * JDK 6 or later
 * Maven 3.0 or later
 * Tomcat 6.x or later
 
-**Create Client in Gluu Server Admin UI**
+### Create Client in Gluu Server Admin UI
 
 Navigate to OpenID Connect > Client and Click Add Client Button
 
@@ -32,12 +30,14 @@ Sample Config in creating a Client:
 * subject type: public
 ```
 
-**Install Your Gluu Server Host certificate**
+### Install Your Gluu Server Host certificate
 
 You need to import your GLuu Server certifcate with the follwing command:
 ```
 keytool -importcert -file gluucert.cer -alias gluucert -keystore “%JAVA_HOME%/jre/lib/security/cacerts”
 ```
+
+## Getting Started
 
 ### Clone
 To get started you can simply clone this repository using git:
