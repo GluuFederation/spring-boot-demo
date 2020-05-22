@@ -30,7 +30,7 @@ Sample Config in creating a Client:
 * subject type: public
 ```
 
-### Add Gluu Server IP and FQDN to host file
+### Add Gluu Server IP and Hostname to host file
 
 Edit the hosts file and add the appropriate IP Address and FQDN. For example:
 ```
