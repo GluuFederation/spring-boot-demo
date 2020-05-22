@@ -45,6 +45,7 @@ Then import the GLuu Server certifcate to your JVM with the follwing command:
 ```
 keytool -importcert -file gluucert.cer -alias gluucert -keystore “%JAVA_HOME%/jre/lib/security/cacerts”
 ```
+Restart your machine/device.
 
 ## Getting Started
 
