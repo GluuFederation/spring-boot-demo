@@ -30,9 +30,18 @@ Sample Config in creating a Client:
 * subject type: public
 ```
 
-### Install Your Gluu Server Host certificate
+### Add Gluu Server IP and FQDN to host file
 
-You need to import your GLuu Server certifcate with the follwing command:
+Edit the hosts file and add the appropriate IP Address and FQDN. For example:
+```
+192.168.1.1 test.gluu.org
+```
+The Windows hosts file is located at C:\Windows\System32\drivers\etc\hosts
+
+### Import Your Gluu Server Host certificate
+You can download your Gluu Server certificate in Configuration > Certicates. Download the HTTPD SSL certificate.
+
+Then import the GLuu Server certifcate to your JVM with the follwing command:
 ```
 keytool -importcert -file gluucert.cer -alias gluucert -keystore “%JAVA_HOME%/jre/lib/security/cacerts”
 ```
@@ -64,22 +73,21 @@ Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/
 mvn spring-boot:run
 ```
 
-### Build an executable JAR
-You can build a single executable JAR file that contains all the necessary dependencies, classes, and resources with:
-```
-mvn clean package
-```
-Then you can run the JAR file with:
-```
-java -jar target/*.jar
-```
-*Instead of `mvn` you can also use the maven-wrapper `./mvnw` to ensure you have everything necessary to run the Maven build.*
-
 ### Test Run the RP spring boot app
 You can test the application by going to your browser and enter:
 ```
 http://localhost:8080/
 ```
+
+### Deploy the app to Tomcat Server
+In your IDE. Add the rp-spring-boot project to your Tomcat Server.
+Restart your tomcat server and go to your browser and enter:
+```
+http://localhost:8080/rp-spring-boot/
+```
+
+*Instead of `mvn` you can also use the maven-wrapper `./mvnw` to ensure you have everything necessary to run the Maven build.*
+
 
 [1]: https://gluu.org/docs/gluu-server/
 [2]: https://gluu.org/docs/gluu-server/4.1/installation-guide/
