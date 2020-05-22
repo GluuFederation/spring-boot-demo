@@ -32,7 +32,7 @@ Sample Config in creating a Client:
 
 ### Add Gluu Server IP and Hostname to host file
 
-Edit the hosts file and add the appropriate IP Address and FQDN. For example:
+Edit the hosts file and add your Gluu Server IP Address and hostname. For example:
 ```
 192.168.1.1 test.gluu.org
 ```
